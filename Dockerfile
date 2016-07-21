@@ -21,7 +21,7 @@ ENV    DEBIAN_FRONTEND noninteractive
 VOLUME ["/data"]
 
 # Download and install everything from the repos.
-RUN    apt-get --yes update; apt-get --yes upgrade; apt-get --yes install openjdk-8-jdk
+RUN    apt-get --yes update; apt-get --yes upgrade; apt-get --yes install openjdk-8-jre-headless curl; apt-get clean
 
 # Load in all of our config files.
 ADD    ./scripts/server.properties /data/server.properties
