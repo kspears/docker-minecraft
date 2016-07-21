@@ -24,7 +24,7 @@ VOLUME ["/data"]
 RUN    apt-get --yes update; apt-get --yes upgrade; apt-get --yes install openjdk-8-jdk
 
 # Load in all of our config files.
-ADD    ./scripts/server.properites /data/server.properties
+ADD    ./scripts/server.properties /data/server.properties
 ADD    ./scripts/start /start
 
 # Fix all permissions
